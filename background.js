@@ -4,6 +4,9 @@
 'use strict';
 
 chrome.alarms.onAlarm.addListener(function() {
+	let sound = new Audio();
+	sound.src = "sound.mp3";
+	sound.play();
   chrome.browserAction.setBadgeText({text: ''});
   chrome.notifications.create({
       type:     'basic',
